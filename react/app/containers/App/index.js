@@ -12,6 +12,7 @@
  */
 
 import React from 'react';
+import redux from 'redux';
 
 export default class App extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
 
