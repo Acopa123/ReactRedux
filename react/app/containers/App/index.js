@@ -21,6 +21,7 @@ import Footer from '../../components/Footer';
 const Div = styled.div`
   margin: 0 auto;
   padding: 0;
+  background-color: #dddddd;
 `;
 
 export default class App extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function

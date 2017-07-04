@@ -15,8 +15,23 @@ const Div = styled.div`
 
 const Head = styled.div`
   width: 100%;
-  height: 100px;
+  height: auto;
   background-color: #FFFFF0;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+const Items = styled.ul`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+const Child = styled.li`
+  list-style: none;
+  font-family: sans-serif;
 `;
 
 const Nav = styled.div`
@@ -51,7 +66,11 @@ function Header() {
   return (
     <Div>
       <Head>
-
+        <img src="http://lorempixel.com/output/technics-q-c-320-100-8.jpg"/>
+        <Items>
+          <Child>Telefono</Child>
+          <Child>Redes Sociales</Child>
+        </Items>
       </Head>
       <Nav>
         <Ul>
