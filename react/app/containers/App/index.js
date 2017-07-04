@@ -13,6 +13,16 @@
 
 import React from 'react';
 import redux from 'redux';
+import styled from 'styled-components';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+//import '../../main.sass'\
+
+const Div = styled.div`
+  margin: 0 auto;
+  padding: 0;
+  background-color: #dddddd;
+`;
 
 export default class App extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
 
@@ -22,9 +32,11 @@ export default class App extends React.PureComponent { // eslint-disable-line re
 
   render() {
     return (
-      <div>
+      <Div>
+        <Header/>
         {React.Children.toArray(this.props.children)}
-      </div>
+        <Footer/>
+      </Div>
     );
   }
 }
