@@ -9,8 +9,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router';
 
 const Div = styled.div`
-  margin: 0;
-  padding: 0;
+  margin-bottom: 20px;
 `;
 
 const Head = styled.div`
@@ -53,6 +52,7 @@ const Ul = styled.ul`
 const Li = styled.li`
   list-style: none;
   padding: 16px 20px 16px 20px;
+  transition: 1s;
 
   &:hover {
 		background-color: #111111;

@@ -9,15 +9,16 @@
  * the linting exception.
  */
 
-import React from 'react';
+import React, {PropTypes} from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
+import ContainerHomePage from '../../components/ContainerHomePage'
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <div>
-        <img src="http://lorempixel.com/output/technics-q-c-640-480-5.jpg"/>
+        <ContainerHomePage />
       </div>
     );
   }
