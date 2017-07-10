@@ -27,6 +27,9 @@ module.exports = (options) => ({
       include: /node_modules/,
       loaders: ['style-loader', 'css-loader'],
     },{
+      test: /\.otf$/i,
+      loader: 'null-loader',
+    },{
       test: /\.sass$/,
       include: /node_modules/,
       loaders: ['style-loader', 'css-loader', 'sass-loader'],

@@ -12,12 +12,17 @@ const Div = styled.div`
   margin: 0px;
 `;
 
+const Img = styled.img`
+  width: 100%;
+  height: auto;
+`
+
 class SimpleSlider extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     var settings = {
       dots: true,
       infinite: true,
-      speed: 500,
+      speed: 1000,
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: true,
@@ -27,12 +32,12 @@ class SimpleSlider extends React.Component { // eslint-disable-line react/prefer
     return (
       <Div>
         <Slider {...settings}>
-          <div><img src="http://lorempixel.com/output/technics-q-c-1280-480-1.jpg"/></div>
-          <div><img src="http://lorempixel.com/output/technics-q-c-1280-480-2.jpg"/></div>
-          <div><img src="http://lorempixel.com/output/technics-q-c-1280-480-3.jpg"/></div>
-          <div><img src="http://lorempixel.com/output/technics-q-c-1280-480-4.jpg"/></div>
-          <div><img src="http://lorempixel.com/output/technics-q-c-1280-480-5.jpg"/></div>
-          <div><img src="http://lorempixel.com/output/technics-q-c-1280-480-6.jpg"/></div>
+          <div><Img src="http://lorempixel.com/output/technics-q-c-1280-320-1.jpg"/></div>
+          <div><Img src="http://lorempixel.com/output/technics-q-c-1280-320-2.jpg"/></div>
+          <div><Img src="http://lorempixel.com/output/technics-q-c-1280-320-3.jpg"/></div>
+          <div><Img src="http://lorempixel.com/output/technics-q-c-1280-320-1.jpg"/></div>
+          <div><Img src="http://lorempixel.com/output/technics-q-c-1280-320-5.jpg"/></div>
+          <div><Img src="http://lorempixel.com/output/technics-q-c-1280-320-6.jpg"/></div>
         </Slider>
       </Div>
     );

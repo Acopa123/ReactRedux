@@ -8,6 +8,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router';
 
+const Container = styled.div`
+  max-width: 1280px;
+  margin: 0 auto;
+`;
+
 const Div = styled.div`
   margin-bottom: 20px;
 `;
@@ -15,7 +20,6 @@ const Div = styled.div`
 const Head = styled.div`
   width: 100%;
   height: auto;
-  background-color: #FFFFF0;
   padding: 10px;
   display: flex;
   flex-direction: row;
@@ -54,30 +58,47 @@ const Li = styled.li`
   padding: 16px 20px 16px 20px;
   transition: 1s;
 
-  &:hover {
+  &:hover{
+    display: block;
 		background-color: #111111;
-    color: #f1c40f;
     transition: .5s;
     box-shadow: 0px -3px 0px #c0392b inset;
+	}
+`;
+
+const A = styled.a`
+  padding: 16px;
+  color: #ffffff;
+
+  &:hover {
+		color: #f1c40f;
 	}
 `;
 
 function Header() {
   return (
     <Div>
-      <Head>
-        <img src="http://lorempixel.com/output/technics-q-c-320-100-8.jpg"/>
-        <Items>
-          <Child>Telefono</Child>
-          <Child>Redes Sociales</Child>
-        </Items>
-      </Head>
+      <Container>
+        <Head>
+          <img src="http://lorempixel.com/output/technics-q-c-320-100-8.jpg"/>
+          <Items>
+            <Child>Telefono</Child>
+            <Child>Redes Sociales</Child>
+          </Items>
+        </Head>
+      </Container>
       <Nav>
         <Ul>
-          <Li>Inicio</Li>
-          <Li>Conócenos</Li>
-          <Li>Servicios</Li>
-          <Li>Contáctenos</Li>
+          <Li><A href="#">Inicio</A></Li>
+          <Li><A href="#">Conócenos</A></Li>
+          <Li><A href="#">Servicios</A>
+          <ul className='uls'>
+            <li><a href="#">Sub Menu 1</a></li>
+            <li><a href="#">Sub Menu 2</a></li>
+            <li><a href="#">Sub Menu 3</a></li>
+          </ul>
+          </Li>
+          <Li><A href="#">Contáctenos</A></Li>
         </Ul>
       </Nav>
     </Div>
