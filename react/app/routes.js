@@ -24,16 +24,30 @@ export default function createRoutes(store) {
         const importModules = Promise.all([
           import('containers/HomePage'),
         ]);
-
         const renderRoute = loadModule(cb);
-
         importModules.then(([component]) => {
           renderRoute(component);
         });
-
         importModules.catch(errorLoading);
       },
-    }, {
+    },{
+      path: '/contactUs',
+      name: 'contactUs',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          import('containers/ContactUs/reducer'),
+          import('containers/ContactUs/sagas'),
+          import('containers/ContactUs'),
+        ]);
+        const renderRoute = loadModule(cb);
+        importModules.then(([reducer, sagas, component]) => {
+          injectReducer('contactUs', reducer.default);
+          injectSagas(sagas.default);
+          renderRoute(component);
+        });
+        importModules.catch(errorLoading);
+      },
+    },{
       path: '*',
       name: 'notfound',
       getComponent(nextState, cb) {

@@ -7,11 +7,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router';
-
-const Container = styled.div`
-  max-width: 1280px;
-  margin: 0 auto;
-`;
+import {Icon} from 'react-fa';
+import {Container} from 'semantic-ui-react';
+import Menu, {SubMenu, MenuItem} from 'rc-menu';
 
 const Div = styled.div`
   margin-bottom: 20px;
@@ -41,9 +39,6 @@ const Nav = styled.div`
   width: 100%;
   height: 50px;
   background-color: #f1c40f;
-  color: #2c3e50;
-  font-size: 16px;
-  font-family: sans-serif;
 `;
 
 const Ul = styled.ul`
@@ -57,21 +52,16 @@ const Li = styled.li`
   list-style: none;
   padding: 16px 20px 16px 20px;
   transition: 1s;
+  color: #3B3738;
+  font-size: 16px;
+  font-family: sans-serif;
 
   &:hover{
     display: block;
 		background-color: #111111;
+    color: #f1c40f;
     transition: .5s;
     box-shadow: 0px -3px 0px #c0392b inset;
-	}
-`;
-
-const A = styled.a`
-  padding: 16px;
-  color: #ffffff;
-
-  &:hover {
-		color: #f1c40f;
 	}
 `;
 
@@ -89,16 +79,10 @@ function Header() {
       </Container>
       <Nav>
         <Ul>
-          <Li><A href="#">Inicio</A></Li>
-          <Li><A href="#">Conócenos</A></Li>
-          <Li><A href="#">Servicios</A>
-          <ul className='uls'>
-            <li><a href="#">Sub Menu 1</a></li>
-            <li><a href="#">Sub Menu 2</a></li>
-            <li><a href="#">Sub Menu 3</a></li>
-          </ul>
-          </Li>
-          <Li><A href="#">Contáctenos</A></Li>
+          <Link to=''><Li><Icon name="home" /> Inicio</Li></Link>
+          <Link to='#'><Li><Icon name="globe" /> Conócenos</Li></Link>
+          <Link to='#'><Li><Icon name="wrench" /> Servicios</Li></Link>
+          <Link to='/contactUs'><Li><Icon name="envelope" /> Contáctenos</Li></Link>
         </Ul>
       </Nav>
     </Div>

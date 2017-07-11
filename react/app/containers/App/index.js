@@ -12,11 +12,10 @@
  */
 
 import React from 'react';
-import redux from 'redux';
 import styled from 'styled-components';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import '../../main.sass';
+//import '../../main.sass';
 //import '../../style.css';
 
 const Div = styled.div`
